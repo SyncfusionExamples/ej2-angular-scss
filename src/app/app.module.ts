@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { GridModule } from '@syncfusion/ej2-ng-grids';
+import { GridModule } from '@syncfusion/ej2-angular-grids';
 
 
 @NgModule({

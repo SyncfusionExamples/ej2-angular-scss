@@ -1,18 +1,23 @@
-import { Component } from '@angular/core';
-import { data } from './dataSource';
+import { Component, OnInit } from '@angular/core';
+import { data } from './data';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-container',
+    template: `<ejs-grid [dataSource]='data'>
+                <e-columns>
+                    <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
+                    <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
+                    <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
+                    <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' width=120></e-column>
+                </e-columns>
+                </ejs-grid>`
 })
-export class AppComponent {
-  public data: Object[] = [
-    { OrderID: 10248, CustomerID: 'VINET', EmployeeID: 5 },
-    { OrderID: 10249, CustomerID: 'TOMSP', EmployeeID: 6 },
-    { OrderID: 10250, CustomerID: 'HANAR', EmployeeID: 4 }];
+export class AppComponent implements OnInit {
 
-  ngOnInit(): void {
-    this.data = data;
-  }
+    public data: Object[];
+
+    ngOnInit(): void {
+      debugger
+        this.data = data;
+    }
 }
