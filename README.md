@@ -37,7 +37,7 @@ Add `stylePreprocessorOptions` option under `apps` in `.angular-cli.json`
         ],
         "stylePreprocessorOptions": {
             "includePaths": [
-                "../node_modules/@syncfusion"
+                "node_modules/@syncfusion"
             ]
         },
         "scripts": [],
