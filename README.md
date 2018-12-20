@@ -9,7 +9,7 @@ To avoid sass compiling issue. We need to add `stylePreprocessorOptions` option 
 ```js
 "stylePreprocessorOptions": { 
     "includePaths": [ 
-        "../node_modules/@syncfusion/ " 
+        "node_modules/@syncfusion/ " 
     ] 
 }
 ```
