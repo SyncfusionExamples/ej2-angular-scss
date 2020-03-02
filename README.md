@@ -49,6 +49,20 @@ Add `stylePreprocessorOptions` option under `apps` in `.angular-cli.json`
     }],
 ```
 
+## How To Override styles
+
+In syncfusion Angular components, you can override control styles by replacing sass variable values like below:
+
+```css
+<style lang="scss">
+// SASS Variable override
+$accent: black;
+$primary: rgb(0, 255, 157);
+// syncfusion styles
+@import '../node_modules/@syncfusion/ej2-angular-grids/styles/material.scss';
+</style>
+```
+
 ## Installing and Running Application
 
 ## Installing Angular CLI
