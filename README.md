@@ -1,92 +1,27 @@
-# Essential JS2 for Angular with SCSS Compilation
+# AngularApp
 
-This project we have configured with SASS compilation for Essential JS 2 for Angular application.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.9.
 
-## Configuring Node SASS Option in `.angular-cli.json`
+## Development server
 
-To avoid sass compiling issue. We need to add `stylePreprocessorOptions` option to `.angular-cli.json` file.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-```js
-"stylePreprocessorOptions": { 
-    "includePaths": [ 
-        "node_modules/@syncfusion/ " 
-    ] 
-}
-```
+## Code scaffolding
 
-Add `stylePreprocessorOptions` option under `apps` in `.angular-cli.json`
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
+## Build
 
-```js
- "apps": [{
-        "root": "src",
-        "outDir": "dist",
-        "assets": [
-            "assets",
-            "favicon.ico"
-        ],
-        "index": "index.html",
-        "main": "main.ts",
-        "polyfills": "polyfills.ts",
-        "test": "test.ts",
-        "tsconfig": "tsconfig.app.json",
-        "testTsconfig": "tsconfig.spec.json",
-        "prefix": "app",
-        "styles": [
-            "styles.scss"
-        ],
-        "stylePreprocessorOptions": {
-            "includePaths": [
-                "node_modules/@syncfusion"
-            ]
-        },
-        "scripts": [],
-        "environmentSource": "environments/environment.ts",
-        "environments": {
-            "dev": "environments/environment.ts",
-            "prod": "environments/environment.prod.ts"
-        }
-    }],
-```
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## How To Override styles
+## Running unit tests
 
-In syncfusion Angular components, you can override control styles by replacing sass variable values like below in `styles.scss` file:
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-```css
+## Running end-to-end tests
 
-// SASS Variable override
-$accent: black;
-$primary: rgb(0, 255, 157);
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-// syncfusion styles
-@import '../node_modules/@syncfusion/ej2-angular-grids/styles/material.scss';
+## Further help
 
-```
-
-
-## Installing and Running Application
-
-## Installing Angular CLI
-
-To install Angular CLI use the following command
-
-```
-npm install -g @angular/cli
-```
-
-### Installing Package 
-
-To install required package for this application. Run the below command.
-
-```
-npm install
-```
-
-### Running Application
-
-To run this application. Run the below command.
-
-```
-npm start
-```
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

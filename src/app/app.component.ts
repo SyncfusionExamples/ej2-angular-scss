@@ -1,23 +1,22 @@
 import { Component, OnInit } from '@angular/core';
-import { data } from './data';
+import {
+  LinkAnnotationService, BookmarkViewService, MagnificationService, ThumbnailViewService,
+  ToolbarService, NavigationService, AnnotationService, TextSearchService, TextSelectionService, PrintService
+} from '@syncfusion/ej2-angular-pdfviewer';
 
 @Component({
-    selector: 'app-container',
-    template: `<ejs-grid [dataSource]='data'>
-                <e-columns>
-                    <e-column field='OrderID' headerText='Order ID' textAlign='Right' width=90></e-column>
-                    <e-column field='CustomerID' headerText='Customer ID' width=120></e-column>
-                    <e-column field='Freight' headerText='Freight' textAlign='Right' format='C2' width=90></e-column>
-                    <e-column field='OrderDate' headerText='Order Date' textAlign='Right' format='yMd' width=120></e-column>
-                </e-columns>
-                </ejs-grid>`
+  selector: 'app-root',
+  // specifies the template string for the PDF Viewer component
+  template: `<div class="content-wrapper">
+  <ejs-pdfviewer id="pdfViewer" [serviceUrl]='service' [documentPath]='document' style="height:640px;display:block"></ejs-pdfviewer>
+</div>`,
+  providers: [LinkAnnotationService, BookmarkViewService, MagnificationService,
+ThumbnailViewService, ToolbarService, NavigationService, AnnotationService, TextSearchService, TextSelectionService, PrintService]
 })
 export class AppComponent implements OnInit {
-
-    public data: Object[];
-
-    ngOnInit(): void {
-      debugger
-        this.data = data;
-    }
+public service = 'https://ej2services.syncfusion.com/production/web-services/api/pdfviewer';
+public document = 'PDF_Succinctly.pdf';
+ngOnInit(): void {
 }
+}
+
